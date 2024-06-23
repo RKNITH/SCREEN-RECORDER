@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Screen Recorder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>Screen Recorder</h1>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="controls">
+                <button id="startBtn">Start Recording</button>
+                <button id="stopBtn" disabled>Stop Recording</button>
+                <button id="downloadBtn" disabled>Download Video</button>
+            </div>
+            <video id="recordedVideo" controls></video>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="year"></span> Screen Recorder. All rights reserved Raviranjan.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.webrtc-experiment.com/RecordRTC.js"></script>
+    <script src="index.js"></script>
+    <script>
+        // Set current year dynamically in the footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>
